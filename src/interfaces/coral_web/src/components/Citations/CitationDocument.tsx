@@ -17,6 +17,7 @@ type Props = {
  * This component renders the document metadata of a citation, with the option of showing an expandable snippet.
  */
 export const CitationDocument: React.FC<Props> = (props) => {
+  console.log("yOOHOOO");
   const { document, isExpandable = false } = props;
   const [isExpanded, setIsExpanded] = useState(true);
 
@@ -41,6 +42,10 @@ export const CitationDocument: React.FC<Props> = (props) => {
         isSelected={isExpandable}
         onToggleSnippet={toggleSnippet}
       />
+
+      <div className="h-[300px] bg-gray-200 flex items-center justify-center text-sm text-pink-500">
+          Test Text Block yo
+      </div>
 
       {isExpanded && isExpandable && (
         <CitationDocumentSnippet

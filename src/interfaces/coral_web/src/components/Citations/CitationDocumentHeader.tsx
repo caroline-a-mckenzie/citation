@@ -66,8 +66,11 @@ export const CitationDocumentHeader: React.FC<Props> = ({
     : undefined;
   const toolIcon = TOOL_ID_TO_ICON[toolId ?? ''] ?? undefined;
 
+  // console.log("Rendering CitationDocumentHeader");
+
   return (
     <div className="flex items-center justify-between gap-x-3">
+      
       <a
         href={safeUrl}
         target="_blank"
@@ -128,7 +131,7 @@ export const CitationDocumentHeader: React.FC<Props> = ({
                 }
               )}
             >
-              {isFile ? STRINGS.file : STRINGS.tool}
+              bomboclat
             </Text>
           )}
 
@@ -140,10 +143,10 @@ export const CitationDocumentHeader: React.FC<Props> = ({
                 'text-mushroom-300': !isSelected,
               })}
             >
-              {displayTitle}
+              bomboclat
             </Text>
             <Icon
-              name="arrow-up-right"
+              name="book"
               className={cn('ml-1 hidden', 'transition-colors duration-200 ease-in-out', {
                 'text-mushroom-300': !isSelected,
                 'group-hover:block': safeUrl,
@@ -154,7 +157,7 @@ export const CitationDocumentHeader: React.FC<Props> = ({
       </a>
       {isExpandable && (
         <IconButton
-          iconName="chevron-down"
+          iconName="book"
           iconClassName={cn(
             'text-coral-300 transition duration-200 delay-75 ease-in-out group-hover:text-coral-200',
             'hidden lg:flex',
